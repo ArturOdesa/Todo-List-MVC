@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Victor';
+    src: url("../assets/fonts/VictorMono-VariableFont_wght.ttf");
+}
+
+.body {
+    font-family: Victor, sans-serif;
+}

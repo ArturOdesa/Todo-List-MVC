@@ -3,6 +3,10 @@
     src: url("../assets/fonts/VictorMono-VariableFont_wght.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     font-family: Victor, sans-serif;
 }

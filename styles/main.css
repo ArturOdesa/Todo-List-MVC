@@ -3,10 +3,233 @@
     src: url("../assets/fonts/VictorMono-VariableFont_wght.ttf");
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 .body {
     font-family: Victor, sans-serif;
+    color: aqua;
+}
+
+.wrapper {
+    height: 100vh;
+    padding: 40px 0 0;
+    background-image: url("../assets/images/wrapper-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.header, .main, .footer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.header .header-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.header .header-date {
+    color: #fff ;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.header .task-input-holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .task-input-holder .task-text {
+    background-color: rgba(67, 67, 67, 0.7);
+    width: 85%;
+    padding: 10px;
+    color: aqua;
+    text-align: center;
+    font-family: Victor, sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+.header .task-input-holder .task-text::placeholder {
+    color: aqua;
+    text-align: center;
+    font-family: Victor, sans-serif;
+}
+
+.header .task-input-holder .add-task-btn {
+    padding: 10px;
+    width: 15%;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(202, 202, 202, 0.61);
+    font-family: Victor, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #39faa3;
+}
+
+.main {
+    padding-top: 30px;
+}
+
+.main .start-message {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.main .task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.main .task-list .task-item {
+    background-color: rgba(147, 147, 147, 0.85);
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .task-list .important {
+    background-color: rgba(239, 172, 40, 0.85);
+    color: #000000;
+}
+
+.main .task-list .completed {
+    background-color: rgba(99, 184, 99, 0.85);
+}
+
+.main .task-list .checkbox-holder {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.main .task-list .task-btn-holder {
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+.main .task-list .task-btn-holder .edit-btn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+background-image: url("../assets/icons/edit-task.png");
+    background-size: cover;
+}
+
+.main .task-list .task-btn-holder .delete-btn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    background-size: cover;
+    background-image: url("../assets/icons/delete-task.png");
+}
+
+.main .task-list .task-done {
+    visibility: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .task-list .task-done::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    background-image: url("../assets/icons/task-undone.png");
+    background-size: cover;
+    position: absolute;
+    visibility: visible;
+    right: -2px;
+    top: -2px;
+}
+
+.main .task-list .task-done:checked::after {
+    background-image: url("../assets/icons/task-done.png");
+    background-size: cover;
+}
+
+.main .task-list .task-important {
+    visibility: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .task-list .task-important:after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    background-image: url("../assets/icons/task-not-important.png");
+    background-size: cover;
+    position: absolute;
+    visibility: visible;
+    right: -2px;
+    top: -2px;
+}
+
+.main .task-list .task-important:checked:after {
+    background-image: url("../assets/icons/task-important.png");
+    background-size: cover;
+}
+
+.main .task-list .task-name {
+    width: 90%;
+}
+
+.main .task-list .completed-text {
+    text-decoration: line-through;
+}
+
+.footer {
+    padding-top: 50px;
+}
+
+.footer .extra-btn-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .extra-btn-holder .extra-btn {
+    border: none;
+    font-family: Victor, sans-serif;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer .extra-btn-holder .extra-btn:hover {
+  text-shadow: 5px 5px 10px #39faa3,
+                5px 5px 15px #04f8d8,
+                    -5px -5px 20px #39faa3,
+                     5px 5px 30px #04f8d8
 }

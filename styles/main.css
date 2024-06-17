@@ -291,3 +291,29 @@ background-image: url("../assets/icons/edit-task.png");
     outline: none;
     background-color: rgba(74, 74, 74, 0.5);
 }
+
+@media (max-width: 780px) {
+    .header, .main, .footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header .task-input-holder .add-task-btn {
+        width: 25%;
+    }
+
+    .main .task-list .checkbox-holder,
+    .main .task-list .task-btn-holder {
+        width: 30%;
+    }
+
+    .footer {
+        padding-top: 20px;
+    }
+
+    .footer .extra-btn-holder {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}

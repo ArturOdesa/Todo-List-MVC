@@ -8,7 +8,50 @@
     <link rel="stylesheet" href="./styles/main.css">
     <title>Todo-List MVC</title>
 </head>
-<body>
-
+<body class="body">
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+        <h1 class="header-title">Todo List</h1>
+            <p class="header-date" id="date">Saturday, 15 June, 2024</p>
+            <div class="task-input-holder">
+                <input type="text" id="task-text" placeholder="Enter Task" class="task-text">
+                <button id="add-task-btn" class="add-task-btn">ADD</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <p class="start-message" id="start-message">No any tasks</p>
+            <ul class="task-list" id="task-list">
+                <template id="task-template">
+                <li class="task-item" id="task-item">
+                <div class="checkbox-holder" id="checkbox-holder">
+                    <input type="checkbox" class="task-done" id="task-done">
+                    <input type="checkbox" class="task-important" id="task-important">
+                </div>
+                    <p class="task-name" id="task-name"></p>
+                    <div class="task-btn-holder">
+                        <button class="edit-btn" id="edit-btn"></button>
+                        <button class="delete-btn" id="delete-btn"></button>
+                    </div>
+                </li>
+                </template>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer" id="footer"> <!-- hidden --->
+        <div class="container">
+            <div class="extra-btn-holder">
+            <button class="extra-btn" id="show-all">show all</button>
+            <button class="extra-btn" id="important">important</button>
+            <button class="extra-btn" id="uncompleted">uncompleted</button>
+            <button class="extra-btn" id="completed">completed</button>
+            <button class="extra-btn" id="remove-all">remove all</button>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="./script/mvc.js"></script>
 </body>
 </html>

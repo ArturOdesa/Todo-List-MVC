@@ -24,6 +24,7 @@ html {
     background-image: url("../assets/images/wrapper-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: scroll;
 }
 
 .container {
@@ -39,6 +40,7 @@ html {
     text-align: center;
     margin-bottom: 40px;
     font-size: 50px;
+    letter-spacing: 15px;
 }
 
 .header .header-date {
@@ -81,6 +83,12 @@ html {
     font-weight: 700;
     letter-spacing: 2px;
     color: #39faa3;
+    transition: 0.15s, 0.15s linear;
+}
+
+.header .task-input-holder .add-task-btn:hover {
+    background-color: #02a65d;
+    color: rgba(239, 239, 239, 0.9);
 }
 
 .main {
@@ -98,6 +106,7 @@ html {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    transition: background-color 0.4s, 0.4s, ease-in-out;
 }
 
 .main .task-list .task-item {
@@ -114,10 +123,12 @@ html {
 .main .task-list .important {
     background-color: rgba(239, 172, 40, 0.85);
     color: #000000;
+    transition: background-color 0.4s, 0.4s, ease-in-out;
 }
 
 .main .task-list .completed {
     background-color: rgba(99, 184, 99, 0.85);
+    transition: background-color 0.4s, 0.4s, ease-in-out;
 }
 
 .main .task-list .checkbox-holder {
@@ -142,6 +153,13 @@ html {
     background-color: transparent;
 background-image: url("../assets/icons/edit-task.png");
     background-size: cover;
+    transition: 0.15s 0.15s ease-in-out;
+}
+
+.main .task-list .task-btn-holder .edit-btn:hover,
+.main .task-list .task-btn-holder .delete-btn:hover {
+    width: 26px;
+    height: 26px;
 }
 
 .main .task-list .task-btn-holder .delete-btn {
@@ -152,9 +170,10 @@ background-image: url("../assets/icons/edit-task.png");
     background-color: transparent;
     background-size: cover;
     background-image: url("../assets/icons/delete-task.png");
+    transition: 0.15s 0.15s ease-in-out;
 }
 
-.main .task-list .task-done {
+.task-done {
     visibility: hidden;
     position: relative;
     cursor: pointer;
@@ -171,11 +190,22 @@ background-image: url("../assets/icons/edit-task.png");
     visibility: visible;
     right: -2px;
     top: -2px;
+    transition: 0.2s, 0.2s linear;
 }
 
 .main .task-list .task-done:checked::after {
+    width: 19px;
+    height: 19px;
     background-image: url("../assets/icons/task-done.png");
     background-size: cover;
+}
+
+.main .task-list .task-done:hover::after {
+    background-image: url("../assets/icons/task-done.png");
+    background-size: cover;
+    width: 19px;
+    height: 19px;
+    transition: 0.8s, 0.2s linear;
 }
 
 .main .task-list .task-important {
@@ -195,11 +225,22 @@ background-image: url("../assets/icons/edit-task.png");
     visibility: visible;
     right: -2px;
     top: -2px;
+    transition: 0.2s, 0.2s linear;
 }
 
 .main .task-list .task-important:checked:after {
     background-image: url("../assets/icons/task-important.png");
     background-size: cover;
+    width: 19px;
+    height: 19px;
+}
+
+.main .task-list .task-important:hover:after {
+    background-image: url("../assets/icons/task-important.png");
+    background-size: cover;
+    width: 19px;
+    height: 19px;
+    transition: 0.8s, 0.2s linear;
 }
 
 .main .task-list .task-name {
@@ -212,6 +253,7 @@ background-image: url("../assets/icons/edit-task.png");
 
 .footer {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer .extra-btn-holder {
@@ -232,4 +274,20 @@ background-image: url("../assets/icons/edit-task.png");
                 5px 5px 15px #04f8d8,
                     -5px -5px 20px #39faa3,
                      5px 5px 30px #04f8d8
+}
+
+.edit-task-input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-style: italic;
+    font-family: Victor, sans-serif;
+    text-decoration: underline;
+    width: 100%;
+    cursor: pointer;
+}
+
+.edit-task-input:focus {
+    outline: none;
+    background-color: rgba(74, 74, 74, 0.5);
 }

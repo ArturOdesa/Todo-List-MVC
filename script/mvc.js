@@ -129,6 +129,7 @@ class TaskView {
 
             if (this.editingIndex === index) {
                 const editInput = document.createElement('input');
+                editInput.classList.add('edit-task-input')
                 editInput.value = task.text;
 
                 editInput.addEventListener('keyup', (e) => {
